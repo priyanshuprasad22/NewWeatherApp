@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00FFFF"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_getCityID"
+        android:layout_width="108dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#FFA500"
+        android:text="AQI"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:iconTint="#FF00FF"
+        app:layout_constraintEnd_toStartOf="@id/btn_getWeather_byCItyID"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_getWeather_byCItyID"
+        android:layout_width="140dp"
+        android:layout_height="62dp"
+        android:backgroundTint="#FFA500"
+        android:text="Complete Weather"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        app:layout_constraintEnd_toStartOf="@id/get_WeatherByCityName"
+        app:layout_constraintStart_toEndOf="@id/btn_getCityID"
+        app:layout_constraintTop_toTopOf="@id/btn_getCityID" />
+
+    <Button
+        android:id="@+id/get_WeatherByCityName"
+        android:layout_width="150dp"
+        android:layout_height="64dp"
+        android:backgroundTint="#FFA500"
+        android:text="Weather by Name"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_getWeather_byCItyID"
+        app:layout_constraintTop_toTopOf="@id/btn_getWeather_byCItyID" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="City Name"
+        android:textAlignment="center"
+        android:textColor="#696969"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_getCityID" />
+
+    <ScrollView
+        android:layout_width="356dp"
+        android:layout_height="356dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textSize="24sp"
+            android:textStyle="normal|bold" />
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
