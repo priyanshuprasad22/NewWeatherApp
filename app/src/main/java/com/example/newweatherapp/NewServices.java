@@ -14,7 +14,7 @@ import org.json.JSONObject;
 
 public class NewServices {
     Context context;
-    public static final String City = "http://api.weatherapi.com/v1/current.json?key=e367749e6f1248d9a31100912221807&q=";
+    public static final String City = BuildConfig.API_Key;
     public NewServices(Context context) {
         this.context = context;
     }

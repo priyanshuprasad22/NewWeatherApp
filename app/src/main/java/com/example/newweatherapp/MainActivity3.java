@@ -16,7 +16,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class MainActivity3 extends AppCompatActivity {
-    public static final String City = "http://api.weatherapi.com/v1/current.json?key=e367749e6f1248d9a31100912221807&q=";
+    public static final String City = BuildConfig.API_Key;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
